@@ -17,6 +17,8 @@ import (
   "math"
   //import random number functions from the math library
   "math/rand"
+  //import string conversion
+  "strconv"
   )
 
 
@@ -25,6 +27,11 @@ import (
 //note: this is similar to how C declares variables of the same type
 func add(x, y int) int {
   return x + y
+}
+
+//added a swap function to swap two variables for one another
+func swap(x, y string) (string, string) {
+	return y, x
 }
 
 //Main Package Function Definition
@@ -57,5 +64,23 @@ func main() {
   fmt.Println(favorite_numbers, "are some of my favorite numbers")
   //Print a prompt with the solution to adding some numbers together using the add function
   fmt.Println(favorite_numbers[0], "+", favorite_numbers[2], "=", add(favorite_numbers[0], favorite_numbers[2]))
+  // put these numbers active numbers into an array
+  active_variables := []string {
+    "hello",
+    "world",
+  }
+  a, b := swap(active_variables[0], active_variables[1])
+  swapped_variables := []string {
+    a,
+    b,
+  }
 
+  // Use a swap funciton  to swap to variables
+  fmt.Println("now lets swap strings", active_variables, "for", swapped_variables)
+  x := strconv.Itoa(favorite_numbers[0])
+  y := strconv.Itoa(favorite_numbers[2])
+  active_variables = []string {x,y}
+  x,y = swap(x, y)
+  swapped_variables = []string {x,y}
+  fmt.Println("now lets swap ints", active_variables, "for", swapped_variables)
 }
