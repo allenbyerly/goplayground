@@ -19,6 +19,9 @@ import (
 
 //Main Package Function Definition
 func main() {
+  //Seed the random number generator based on the current time (UTC Unix Nano)
+  // Use
+  rand.Seed(time.Now().UTC().UnixNano())
   //Print a Name Prompt
   fmt.Println("Hello World!")
   //Print a Description Prompt
@@ -27,5 +30,5 @@ func main() {
   fmt.Println("The time is: ", time.Now())
   //Print a random number prompt
   //note: the random number will always return the same number until it is seeded
-  fmt.Println("MA random number is: ", rand.Intn(10))
+  fmt.Println("MA random number is: ", rand.Intn(100))
 }
