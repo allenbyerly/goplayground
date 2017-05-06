@@ -19,6 +19,12 @@ import (
   "math/rand"
   )
 
+
+//added a basic addition function to perform addition of two numbers
+func add(x int, y int) int {
+  return x + y
+}
+
 //Main Package Function Definition
 func main() {
   //Seed the random number generator based on the current time (UTC Unix Nano)
@@ -38,5 +44,16 @@ func main() {
   fmt.Printf("Now you have %v problems.\n", int(math.Sqrt(rand.Float64()*100)))
   //Print a prompt that displays Pi
   fmt.Printf("Pi is: %v\n", math.Pi)
+  //add some of my favorite numbers together
+  //use variables this time
+  favorite_numbers := []int {
+    42,
+    22,
+    13,
+    222,
+  }
+  fmt.Println(favorite_numbers, "are some of my favorite numbers")
+  //Print a prompt with the solution to adding some numbers together using the add function
+  fmt.Println(favorite_numbers[0], "+", favorite_numbers[2], "=", add(favorite_numbers[0], favorite_numbers[2]))
 
 }
