@@ -1,8 +1,7 @@
-//This is the hello world exaple in go. It displays a hello world prompt.
-//In addition it displays prompts to demonstrate some basic functions.
+//This is a monopololy program to help track and handle the monolpoly pieces for the safeway monopoly giveaway.
 
 //Author: Allen Byerly
-//Name: hello
+//Name: monopoly
 
 //The Main Package Definition
 package main
