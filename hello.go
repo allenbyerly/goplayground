@@ -21,7 +21,9 @@ import (
 
 
 //added a basic addition function to perform addition of two numbers
-func add(x int, y int) int {
+//Shortend parameter inputs to only one int declaration
+//note: this is similar to how C declares variables of the same type
+func add(x, y int) int {
   return x + y
 }
 
