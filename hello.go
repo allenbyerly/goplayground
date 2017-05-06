@@ -13,6 +13,8 @@ import (
   "fmt"
   //import time library
   "time"
+  //import the math library
+  "math"
   //import random number functions from the math library
   "math/rand"
   )
@@ -30,5 +32,9 @@ func main() {
   fmt.Println("The time is: ", time.Now())
   //Print a random number prompt
   //note: the random number will always return the same number until it is seeded
-  fmt.Println("MA random number is: ", rand.Intn(100))
+  fmt.Println("A random number is: ", rand.Intn(100))
+  //Print a problems Promt based off the square root of the random number
+  //Use a place holder to hold for the calculated problems
+  fmt.Printf("Now you have %g problems.", math.Sqrt(rand.Float64()*100))
+
 }
